@@ -42,26 +42,30 @@ body {
 
 .image-container {
   position: relative;
-}
-
-.nft-img {
   border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
   margin: 0 auto;
 }
 
 .overlay {
-  opacity: 0;
-  z-index: 1;
   position: absolute;
-  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  transition: background-color 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .overlay:hover {
   opacity: 1;
-  background-blend-mode: multiply;
+  /* background-blend-mode: multiply; */
   background-color: hsla(178, 100%, 50%, 0.5);
 }
 
